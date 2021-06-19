@@ -33,6 +33,7 @@ router.get('/v3/covid-19/vaccine/coverage/countries', async (req, res) => {
 			const { timeline } = country;
 			const obj = {
 				country: country.country,
+				iso_code: country.iso_code,
 				timeline: buildVaccineTimeline(timeline, lastDays, isFullData)
 			};
 			return obj;
